@@ -12,7 +12,7 @@ deploy:
           HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:release web --app registry.heroku.com/tugas-kelompok-pemweb/web
 
 workflows:
-  version: 2.1
+  version: 2
   deploy:
     jobs:
       - deploy:
