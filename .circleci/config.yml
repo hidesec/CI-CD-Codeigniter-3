@@ -1,5 +1,16 @@
 version: 2
 jobs:
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Docker Build
+          command: |
+            docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
+            docker build . --pull -t ${DOCKER_IMAGE}
+            docker tag ${DOCKER_IMAGE} ${DOCKER_IMAGE}
+            docker push ${DOCKER_IMAGE}
   deploy:
     machine: true
     steps:
@@ -17,6 +28,13 @@ jobs:
 
 workflows:
   version: 2
+  build:
+    jobs:
+      - build:
+          context: .
+          filters:
+            branches:
+              only: main
   deploy:
     jobs:
       - deploy:
