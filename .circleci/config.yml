@@ -11,3 +11,12 @@ deploy:
           HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:push registry.heroku.com/tugas-kelompok-pemweb/web
           HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:release web --app registry.heroku.com/tugas-kelompok-pemweb/web
 
+workflows:
+  version: 2.1
+  deploy:
+    jobs:
+      - deploy:
+          context: .
+          filters:
+            branches:
+              only: main
