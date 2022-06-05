@@ -9,10 +9,10 @@ jobs:
           command: |
             sudo curl https://cli-assets.heroku.com/install.sh | sh
             HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:login
-            HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:push registry.heroku.com/tugas-kelompok-pemweb/web
-#            HEROKU_API_KEY=${HEROKU_TOKEN} heroku labs:enable --app=tugas-kelompok-pemweb runtime-new-layer-extract
-#            HEROKU_API_KEY=${HEROKU_TOKEN} heroku stack:set container --app tugas-kelompok-pemweb
-#            HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:release web --app tugas-kelompok-pemweb
+            HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:push --app tugas-kelompok-pemweb web
+            HEROKU_API_KEY=${HEROKU_TOKEN} heroku labs:enable --app=tugas-kelompok-pemweb runtime-new-layer-extract
+            HEROKU_API_KEY=${HEROKU_TOKEN} heroku stack:set container --app tugas-kelompok-pemweb
+            HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:release web --app tugas-kelompok-pemweb
 
 workflows:
   version: 2
