@@ -9,7 +9,7 @@ RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
 # Copy application source
 COPY . /var/www/
 RUN chown -R www-data:www-data /var/www
-RUN CHMOD 755 /var/www/assets
-RUN CHMOD 755 /var/www/assets/*
+RUN chmod 755 /var/www/assets
+RUN chmod 755 /var/www/assets/*
 
 CMD ["start-apache"]
