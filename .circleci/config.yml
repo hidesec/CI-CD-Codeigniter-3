@@ -11,6 +11,7 @@ jobs:
             docker build . --pull -t ${DOCKER_IMAGE}
             docker tag ${DOCKER_IMAGE} ${DOCKER_IMAGE}
             docker push ${DOCKER_IMAGE}
+            php index.php migration
 
   deploy:
     machine: true
@@ -25,7 +26,6 @@ jobs:
             HEROKU_API_KEY=${HEROKU_TOKEN} heroku labs:enable --app=tugas-kelompok-pemweb runtime-new-layer-extract
             HEROKU_API_KEY=${HEROKU_TOKEN} heroku stack:set container --app tugas-kelompok-pemweb
             HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:release web --app tugas-kelompok-pemweb
-            docker --version
 
 workflows:
   version: 2
