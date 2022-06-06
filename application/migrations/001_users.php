@@ -26,13 +26,13 @@ class Migration_Users extends CI_Migration {
                 'constraint' => '20',
             ),
             'last_login' => array(
-                'type' => 'DATETIME'
+                'type' => 'TIMESTAMP'
             ),
 			'created_at' => array(
-                'type' => 'DATETIME'
+                'type' => 'TIMESTAMP'
             ),
 			'updated_at' => array(
-                'type' => 'DATETIME'
+                'type' => 'TIMESTAMP'
             ),
         ));
         $this->dbforge->add_key('id', TRUE);
