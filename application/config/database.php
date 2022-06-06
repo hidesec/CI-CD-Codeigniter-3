@@ -84,7 +84,7 @@ $db['default'] = array(
 //	'username' => '',
 //	'password' => '',
 //	'database' => '',
-	'dbdriver' => 'postgre',
+	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
