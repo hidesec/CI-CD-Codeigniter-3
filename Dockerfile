@@ -13,7 +13,6 @@ RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 RUN php -r "unlink('composer-setup.php');"
 
 #Install package
-RUN composer require vlucas/phpdotenv
 RUN composer install
 
 # Copy application source
