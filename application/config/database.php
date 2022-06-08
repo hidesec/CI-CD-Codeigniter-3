@@ -1,5 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+require_once BASEPATH . 'dotenv/autoloader.php';
+$dotenv = new Dotenv\Dotenv(FCPATH);
+$dotenv->load();
 
 /*
 | -------------------------------------------------------------------
@@ -76,10 +79,10 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn' => '',
 //	'dsn'	=> 'postgres://jiarxkvyjrpjdy:de06184046bd90a069f81d50532f6faf0c55e2dfa30f81056fd7fa4584ce18b5@ec2-54-165-178-178.compute-1.amazonaws.com:5432/ddcr1h3q3i2ijg',
-	'hostname' => 'sql10.freemysqlhosting.net',
-	'username' => 'sql10497971',
-	'password' => 'XtAZW2b2ht',
-	'database' => 'sql10497971',
+	'hostname' => getenv('DB_HOSTNAME'),
+	'username' => getenv('DB_USERNAME'),
+	'password' => getenv('DB_PASSWORD'),
+	'database' => getenv('DB_DATABASE'),
 //	'hostname' => 'localhost',
 //	'username' => '',
 //	'password' => '',
@@ -87,7 +90,7 @@ $db['default'] = array(
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'production'),
+	'db_debug' => (getenv('APP_ENV') !== 'production'),
 	'cache_on' => FALSE,
 	'cachedir' => '',
 	'char_set' => 'utf8',
@@ -99,3 +102,19 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+//echo '<pre>';
+//  print_r($db['default']);
+//  echo '</pre>';
+//
+//  echo 'Connecting to database: ' .$db['default']['database'];
+//  $dbh=mysql_connect
+//  (
+//    $db['default']['hostname'],
+//    $db['default']['username'],
+//    $db['default']['password'])
+//    or die('Cannot connect to the database because: ' . mysql_error());
+//    mysql_select_db ($db['default']['database']);
+//
+//    echo '<br />   Connected OK:'  ;
+//    die( 'file: ' .__FILE__ . ' Line: ' .__LINE__);

@@ -10,5 +10,10 @@ services:
       - .:/var/www
     environment:
       - APP_ENV=development
+      - DB_HOSTNAME=sql10.freemysqlhosting.net
+      - DB_USERNAME=sql10497971
+      - DB_PASSWORD=XtAZW2b2ht
+      - DB_DATABASE=sql10497971
+      - DB_DRIVER=mysqli
       - APACHE_RUN_USER=#1000
       - APACHE_RUN_GROUP=#1000  
