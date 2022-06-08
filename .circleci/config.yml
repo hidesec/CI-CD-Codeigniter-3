@@ -25,13 +25,6 @@ jobs:
             HEROKU_API_KEY=${HEROKU_TOKEN} heroku labs:enable --app=tugas-kelompok-pemweb runtime-new-layer-extract
             HEROKU_API_KEY=${HEROKU_TOKEN} heroku stack:set container --app tugas-kelompok-pemweb
             HEROKU_API_KEY=${HEROKU_TOKEN} heroku container:release web --app tugas-kelompok-pemweb
-            HEROKU_API_KEY=${HEROKU_TOKEN} heroku config:set APP_ENV=production
-            HEROKU_API_KEY=${HEROKU_TOKEN} heroku config:set APP_ENV=development
-            HEROKU_API_KEY=${HEROKU_TOKEN} heroku config:set DB_HOSTNAME=sql10.freemysqlhosting.net
-            HEROKU_API_KEY=${HEROKU_TOKEN} heroku config:set DB_USERNAME=sql10497971
-            HEROKU_API_KEY=${HEROKU_TOKEN} heroku config:set DB_PASSWORD=XtAZW2b2ht
-            HEROKU_API_KEY=${HEROKU_TOKEN} heroku config:set DB_DATABASE=sql10497971
-            HEROKU_API_KEY=${HEROKU_TOKEN} heroku config:set DB_DRIVER=mysqli
 
 workflows:
   version: 2
