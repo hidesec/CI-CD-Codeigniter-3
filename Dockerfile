@@ -12,9 +12,6 @@ RUN php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611
 RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 RUN php -r "unlink('composer-setup.php');"
 
-#Install package
-RUN composer install
-
 # Copy application source
 COPY . /var/www/
 RUN chown -R www-data:www-data /var/www
