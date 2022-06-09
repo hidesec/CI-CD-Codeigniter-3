@@ -16,4 +16,4 @@ services:
       - DB_DATABASE=sql10497971
       - DB_DRIVER=mysqli
       - APACHE_RUN_USER=#1000
-      - APACHE_RUN_GROUP=#1000  
+      - APACHE_RUN_GROUP=#1000
