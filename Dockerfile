@@ -15,7 +15,7 @@ RUN php -r "unlink('composer-setup.php');"
 # Copy application source
 COPY . /var/www/
 RUN chown -R www-data:www-data /var/www
-RUN set | grep APP_ENV > /var/www/.env
+RUN set | grep APP_ENV >> /var/www/.env
 RUN set | grep DB_HOSTNAME >> /var/www/.env
 RUN set | grep DB_USERNAME >> /var/www/.env
 RUN set | grep DB_PASSWORD >> /var/www/.env
