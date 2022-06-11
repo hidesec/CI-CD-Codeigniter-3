@@ -9,11 +9,11 @@ services:
     volumes:
       - .:/var/www
     environment:
-      - APP_ENV=development
-      - DB_HOSTNAME=sql10.freemysqlhosting.net
-      - DB_USERNAME=sql10497971
-      - DB_PASSWORD=XtAZW2b2ht
-      - DB_DATABASE=sql10497971
-      - DB_DRIVER=mysqli
+      - APP_ENV=${APP_ENV}
+      - DB_HOSTNAME=${DB_HOSTNAME}
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_DATABASE=${DB_DATABASE}
+      - DB_DRIVER=${DB_DRIVER}
       - APACHE_RUN_USER=#1000
       - APACHE_RUN_GROUP=#1000

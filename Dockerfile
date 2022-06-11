@@ -14,6 +14,12 @@ RUN php -r "unlink('composer-setup.php');"
 
 # Copy application source
 COPY . /var/www/
+ENV APP_ENV "$APP_ENV"
+ENV DB_HOSTNAME "$DB_HOSTNAME"
+ENV DB_USERNAME "$DB_USERNAME"
+ENV DB_PASSWORD "$DB_PASSWORD"
+ENV DB_DATABASE "$DB_DATABASE"
+ENV DB_DRIVER "$DB_DRIVER"
 RUN chown -R www-data:www-data /var/www
 RUN chmod -R 755 /var/www/assets
 
