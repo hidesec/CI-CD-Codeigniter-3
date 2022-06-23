@@ -13,6 +13,7 @@ RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 RUN php -r "unlink('composer-setup.php');"
 
 # Copy application source
+RUN rm -rf /var/www/.env
 COPY . /var/www/
 RUN chown -R www-data:www-data /var/www
 RUN chmod -R 755 /var/www/assets
