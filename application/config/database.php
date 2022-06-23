@@ -104,18 +104,18 @@ $db['default'] = array(
 	'save_queries' => TRUE
 );
 
-//echo '<pre>';
-//  print_r($db['default']);
-//  echo '</pre>';
-//
-//  echo 'Connecting to database: ' .$db['default']['database'];
-//  $dbh=mysql_connect
-//  (
-//    $db['default']['hostname'],
-//    $db['default']['username'],
-//    $db['default']['password'])
-//    or die('Cannot connect to the database because: ' . mysql_error());
-//    mysql_select_db ($db['default']['database']);
-//
-//    echo '<br />   Connected OK:'  ;
-//    die( 'file: ' .__FILE__ . ' Line: ' .__LINE__);
+echo '<pre>';
+  print_r($db['default']);
+  echo '</pre>';
+
+  echo 'Connecting to database: ' .$db['default']['database'];
+  $dbh=mysql_connect
+  (
+    $db['default']['hostname'],
+    $db['default']['username'],
+    $db['default']['password'])
+    or die('Cannot connect to the database because: ' . mysql_error());
+    mysql_select_db ($db['default']['database']);
+
+    echo '<br />   Connected OK:'  ;
+    die( 'file: ' .__FILE__ . ' Line: ' .__LINE__);
