@@ -15,6 +15,12 @@ RUN php -r "unlink('composer-setup.php');"
 # Copy application source
 COPY . /var/www/
 RUN chown -R www-data:www-data /var/www
+unset APP_ENV
+unset DB_HOSTNAME
+unset DB_USERNAME
+unset DB_PASSWORD
+unset DB_DATABASE
+unset DB_DRIVER
 ENV APP_ENV "$APP_ENV"
 ENV DB_HOSTNAME "$DB_HOSTNAME"
 ENV DB_USERNAME "$DB_USERNAME"
