@@ -28,6 +28,9 @@ class Migration_Users extends CI_Migration {
             'last_login' => array(
                 'type' => 'TIMESTAMP'
             ),
+			'status' => array(
+                'type' => 'SMALLINT'
+            ),
 			'created_at' => array(
                 'type' => 'TIMESTAMP'
             ),
