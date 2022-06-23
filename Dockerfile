@@ -28,6 +28,12 @@ RUN set | grep DB_USERNAME >> /var/www/.env
 RUN set | grep DB_PASSWORD >> /var/www/.env
 RUN set | grep DB_DATABASE >> /var/www/.env
 RUN set | grep DB_DRIVER >> /var/www/.env
+RUN set | grep APP_ENV
+RUN set | grep DB_HOSTNAME
+RUN set | grep DB_USERNAME
+RUN set | grep DB_PASSWORD
+RUN set | grep DB_DATABASE
+RUN set | grep DB_DRIVER
 RUN chmod -R 755 /var/www/assets
 
 CMD ["start-apache"]
