@@ -30,4 +30,5 @@ RUN set | grep DB_DATABASE >> /var/www/.env
 RUN set | grep DB_DRIVER >> /var/www/.env
 RUN chmod -R 755 /var/www/assets
 
+
 CMD ["start-apache"]
