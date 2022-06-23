@@ -22,12 +22,6 @@ ENV DB_PASSWORD "$DB_PASSWORD"
 ENV DB_DATABASE "$DB_DATABASE"
 ENV DB_DRIVER "$DB_DRIVER"
 RUN rm -rf /var/www/.env
-RUN set | grep APP_ENV > /var/www/.env
-RUN set | grep DB_HOSTNAME >> /var/www/.env
-RUN set | grep DB_USERNAME >> /var/www/.env
-RUN set | grep DB_PASSWORD >> /var/www/.env
-RUN set | grep DB_DATABASE >> /var/www/.env
-RUN set | grep DB_DRIVER >> /var/www/.env
 RUN chmod -R 755 /var/www/assets
 
 CMD ["start-apache"]
