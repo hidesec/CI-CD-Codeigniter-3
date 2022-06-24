@@ -6,7 +6,7 @@ class Migration extends CI_Controller {
          $this->load->library('migration');
     }
     public function index() {
-        if (!$this->migration->current()) {
+        if (!$this->migration->latest()) {
             show_error($this->migration->error_string());
         } else {
             echo 'Migration worked!';

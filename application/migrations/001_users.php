@@ -5,7 +5,6 @@ class Migration_Users extends CI_Migration {
         $this->dbforge->add_field(array(
             'id' => array(
                 'type' => 'INT',
-                'constraint' => 11,
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ),
@@ -15,11 +14,11 @@ class Migration_Users extends CI_Migration {
 			),
 			'password' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '45',
+                'constraint' => '200',
             ),
             'email' => array(
                 'type' => 'VARCHAR',
-                'constraint' => '45',
+                'constraint' => '40',
             ),
 			'role' => array(
                 'type' => 'VARCHAR',
@@ -31,12 +30,8 @@ class Migration_Users extends CI_Migration {
 			'status' => array(
                 'type' => 'SMALLINT'
             ),
-			'created_at' => array(
-                'type' => 'TIMESTAMP'
-            ),
-			'updated_at' => array(
-                'type' => 'TIMESTAMP'
-            ),
+    		'created_at datetime default current_timestamp',
+    		'updated_at datetime default current_timestamp on update current_timestamp',
         ));
         $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table('users');
