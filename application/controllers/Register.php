@@ -52,7 +52,7 @@
 					'role' => 'users'
 				);
 
-				$result = $this->auth_database->registration_insert($data);
+				$result = $this->Auth_database->registration_insert($data);
 
 				if ($result == TRUE) {
 					$data['message_display'] = 'Registration Successfully !';

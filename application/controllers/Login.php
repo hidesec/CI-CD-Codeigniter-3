@@ -51,10 +51,10 @@ class Login extends CI_Controller {
 				'password' => md5($this->input->post('password'))
 			);
 
-			$result = $this->auth_database->login($data);
+			$result = $this->Auth_database->login($data);
 			if ($result == TRUE) {
 				$username = $this->input->post('username');
-				$result = $this->auth_database->read_user_information($username);
+				$result = $this->Auth_database->read_user_information($username);
 				if ($result != false) {
 					$session_data = array(
 						'username' => $result[0]->username,
