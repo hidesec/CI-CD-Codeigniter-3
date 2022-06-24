@@ -20,7 +20,7 @@ class Login extends CI_Controller {
 		$this->load->library('session');
 
 		// Load database
-		$this->load->model('auth_database');
+		$this->load->model('Auth_database');
 
 		//load url helper library
 		$this->load->helper('url');

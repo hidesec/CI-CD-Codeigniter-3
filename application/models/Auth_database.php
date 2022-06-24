@@ -1,6 +1,11 @@
 <?php
 
 Class Auth_Database extends CI_Model {
+    
+    public function __construct()
+    {
+        parent::__construct();
+    }
 
 	// Insert registration data in database
 	public function registration_insert($data) {
