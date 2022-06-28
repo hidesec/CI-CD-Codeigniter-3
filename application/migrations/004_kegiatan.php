@@ -38,11 +38,13 @@ class Migration_Kegiatan extends CI_Migration {
 				'constraint' => '30'
 			),
 			'jenis_id' => array(
-				'type' => 'INT'
+				'type' => 'INT',
+				'unsigned' => TRUE,
 			)
         ));
         $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table('kegiatan');
+		$this->db->query('ALTER TABLE `kegiatan` ADD FOREIGN KEY(`jenis_id`) REFERENCES `jenis_kegiatan`(`id`);');
     }
     public function down() {
         $this->dbforge->drop_table('kegiatan');
