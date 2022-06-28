@@ -19,6 +19,20 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
+				<li class="sidebar-item  has-sub <?=uri_string() === 'kegiatan' ? 'active' : ''?>">
+					<a href="#" class='sidebar-link'>
+                        <svg class="bi" width="1em" height="1em" fill="currentColor">
+                            <use
+                                xlink:href="<?php echo base_url(); ?>assets/vendors/bootstrap-icons/bootstrap-icons.svg#calendar-check-fill" />
+                        </svg>
+                        <span>Kegiatan</span>
+                    </a>
+                    <ul class="submenu <?=uri_string() === 'kegiatan' ? 'active' : ''?>">
+                        <li class="submenu-item <?=uri_string() === 'kegiatan' ? 'active' : ''?>">
+                            <a href="<?=site_url('kegiatan')?>">Kegiatan</a>
+                        </li>
+					</ul>
+				</li>
                 <li class="sidebar-item">
                     <a href="logout" class='sidebar-link'>
                         <i class="bi bi-arrow-left-circle-fill"></i>

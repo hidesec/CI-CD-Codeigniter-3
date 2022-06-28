@@ -57,3 +57,4 @@ $route['register'] = 'register';
 $route['post-register']['post'] = 'register/new_user_registration';
 $route['dashboard'] = 'dashboard';
 $route['logout'] = 'login/logout';
+$route['kegiatan'] = 'kegiatan';
