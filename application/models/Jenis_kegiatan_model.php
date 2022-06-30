@@ -60,21 +60,10 @@ Class Jenis_kegiatan_model extends CI_Model
 	}
 
 	public function jenis_kegiatan_update($data, $id){
-		$condition = "nama =" . "'" . $data['nama'] . "'";
-		$this->db->select('*');
-		$this->db->from('jenis_kegiatan');
-		$this->db->where($condition);
-		$this->db->limit(1);
-		$query = $this->db->get();
-
-		if ($query->num_rows() === 0) {
-			$this->db->where('id', $id);
-			$this->db->update('jenis_kegiatan', $data);
-			if ($this->db->affected_rows() > 0) {
-				return true;
-			} else {
-				return false;
-			}
+		$this->db->where('id', $id);
+		$this->db->update('jenis_kegiatan', $data);
+		if ($this->db->affected_rows() > 0) {
+			return true;
 		} else {
 			return false;
 		}

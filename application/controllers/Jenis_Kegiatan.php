@@ -37,7 +37,7 @@ class Jenis_Kegiatan extends CI_Controller {
 	}
 
 	public function store(){
-		$this->form_validation->set_rules('jenis_kegiatan', 'Jenis_kegiatan', 'trim|required|xss_clean');
+		$this->form_validation->set_rules('nama_jenis_kegiatan', 'Jenis_kegiatan', 'trim|required|xss_clean');
 
 		$data = array(
 			'nama' => $this->input->post('nama_jenis_kegiatan'),
@@ -92,7 +92,7 @@ class Jenis_Kegiatan extends CI_Controller {
 		if ($result == TRUE) {
 			$messages = 'Berhasil menghapus jenis kegiatan '.$nama_jenis_kegiatan.'!';
 			$this->session->set_flashdata('messages', $messages);
-			redirect("jenis_kegiatan");
+			redirect("jenis-kegiatan");
 		}else{
 			$messages = 'Gagal menghapus jenis kegiatan '.$nama_jenis_kegiatan.'!';
 			$this->session->set_flashdata('messages', $messages);
