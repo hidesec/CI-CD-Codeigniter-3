@@ -122,7 +122,7 @@ class Kegiatan extends CI_Controller{
 			die();
 			$messages = $this->upload->display_errors();
 			$this->session->set_flashdata('messages', $messages);
-			redirect("kegiatan/edit/".$id);
+			redirect("kegiatan/show/".$id);
 		} else {
 			$file_upload = $this->upload->data();
 			$data = array(
@@ -145,7 +145,7 @@ class Kegiatan extends CI_Controller{
 			}else{
 				$messages = 'Kegiatan '.$this->input->post('judul').' sudah terdaftar!';
 				$this->session->set_flashdata('messages', $messages);
-				redirect("kegiatan/edit/".$id);
+				redirect("kegiatan/show/".$id);
 			}
 		}
 	}

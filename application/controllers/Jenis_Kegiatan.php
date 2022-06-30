@@ -48,11 +48,11 @@ class Jenis_Kegiatan extends CI_Controller {
 		if ($result == TRUE) {
 			$messages = 'Berhasil menambahkan jenis kegiatan '.$this->input->post('nama_jenis_kegiatan').'!';
 			$this->session->set_flashdata('messages', $messages);
-			redirect("jenis_kegiatan");
+			redirect("Jenis_Kegiatan");
 		}else{
 			$messages = 'Jenis kegiatan '.$this->input->post('nama_jenis_kegiatan').' sudah terdaftar!';
 			$this->session->set_flashdata('messages', $messages);
-			redirect("jenis-kegiatan/create");
+			redirect("Jenis_Kegiatan/create");
 		}
 	}
 
@@ -77,11 +77,11 @@ class Jenis_Kegiatan extends CI_Controller {
 		if ($result == TRUE) {
 			$messages = 'Berhasil merubah jenis kegiatan '.$this->input->post('nama_jenis_kegiatan').'!';
 			$this->session->set_flashdata('messages', $messages);
-			redirect("jenis_kegiatan");
+			redirect("Jenis_Kegiatan");
 		}else{
 			$messages = 'Jenis kegiatan '.$this->input->post('nama_jenis_kegiatan').' sudah terdaftar!';
 			$this->session->set_flashdata('messages', $messages);
-			redirect("jenis-kegiatan/show/".$id);
+			redirect("Jenis_Kegiatan/show/".$id);
 		}
 	}
 
@@ -92,11 +92,11 @@ class Jenis_Kegiatan extends CI_Controller {
 		if ($result == TRUE) {
 			$messages = 'Berhasil menghapus jenis kegiatan '.$nama_jenis_kegiatan.'!';
 			$this->session->set_flashdata('messages', $messages);
-			redirect("jenis-kegiatan");
+			redirect("Jenis_Kegiatan");
 		}else{
 			$messages = 'Gagal menghapus jenis kegiatan '.$nama_jenis_kegiatan.'!';
 			$this->session->set_flashdata('messages', $messages);
-			redirect("jenis-kegiatan");
+			redirect("Jenis_Kegiatan");
 		}
 	}
 }
