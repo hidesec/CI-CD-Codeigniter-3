@@ -24,6 +24,11 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/app.css">
     <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/favicon.svg" type="image/x-icon">
+
+	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+	<!-- Include Bootstrap Datepicker -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 </head>
 
 <body>
