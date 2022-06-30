@@ -19,7 +19,7 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
-				<li class="sidebar-item  has-sub <?=(uri_string() === 'kegiatan' || uri_string() === 'kegiatan/create' || uri_string() === 'kegiatan/update' || uri_string() === 'jenis-kegiatan' || uri_string() === 'jenis-kegiatan/create' || uri_string() === 'jenis-kegiatan/update') ? 'active' : ''?>">
+				<li class="sidebar-item  has-sub <?=(uri_string() === 'kegiatan' || uri_string() === 'kegiatan/create' || uri_string() === 'kegiatan/update' || uri_string() === 'Jenis_Kegiatan' || uri_string() === 'Jenis_Kegiatan/create' || uri_string() === 'Jenis_Kegiatan/update') ? 'active' : ''?>">
 					<a href="#" class='sidebar-link'>
                         <svg class="bi" width="1em" height="1em" fill="currentColor">
                             <use
@@ -27,12 +27,12 @@
                         </svg>
                         <span>Kegiatan</span>
                     </a>
-                    <ul class="submenu <?=(uri_string() === 'kegiatan' || uri_string() === 'kegiatan/create' || uri_string() === 'kegiatan/update' || uri_string() === 'jenis-kegiatan' || uri_string() === 'jenis-kegiatan/create' || uri_string() === 'jenis-kegiatan/update') ? 'active' : ''?>">
+                    <ul class="submenu <?=(uri_string() === 'kegiatan' || uri_string() === 'kegiatan/create' || uri_string() === 'kegiatan/update' || uri_string() === 'Jenis_Kegiatan' || uri_string() === 'Jenis_Kegiatan/create' || uri_string() === 'Jenis_Kegiatan/update') ? 'active' : ''?>">
 						<li class="submenu-item <?=(uri_string() === 'kegiatan' || uri_string() === 'kegiatan/create' || uri_string() === 'kegiatan/update') ? 'active' : ''?>">
                             <a href="<?=site_url('kegiatan')?>">Kegiatan</a>
                         </li>
-						<li class="submenu-item <?=(uri_string() === 'jenis-kegiatan' || uri_string() === 'jenis-kegiatan/create' || uri_string() === 'jenis-kegiatan/update') ? 'active' : ''?>">
-                            <a href="<?=site_url('jenis-kegiatan')?>">Jenis Kegiatan</a>
+						<li class="submenu-item <?=(uri_string() === 'Jenis_Kegiatan' || uri_string() === 'Jenis_Kegiatan/create' || uri_string() === 'Jenis_Kegiatan/update') ? 'active' : ''?>">
+                            <a href="<?=site_url('Jenis_Kegiatan')?>">Jenis Kegiatan</a>
                         </li>
 					</ul>
 				</li>
