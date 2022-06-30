@@ -117,9 +117,6 @@ class Kegiatan extends CI_Controller{
 
 		$this->load->library('upload', $config);
 		if (!$this->upload->do_upload('foto_flyer')) {
-			echo "masuk if";
-			echo $this->input->post('foto_flyer');
-			die();
 			$messages = $this->upload->display_errors();
 			$this->session->set_flashdata('messages', $messages);
 			redirect("kegiatan/show/".$id);
