@@ -96,7 +96,7 @@
 														<i class="bx bx-x d-block d-sm-none"></i>
 														<span class="d-none d-sm-block">Tutup</span>
 													</button>
-													<a href="<?=site_url('kegiatan/hapus/'.$kgtn['id'])?>" type="button" class="btn btn-danger ml-1">
+													<a href="<?=site_url('kegiatan/delete/'.$kgtn['id'])?>" type="button" class="btn btn-danger ml-1">
 														<i class="bx bx-check d-block d-sm-none"></i>
 														<span class="d-none d-sm-block">Ya</span>
 													</a>

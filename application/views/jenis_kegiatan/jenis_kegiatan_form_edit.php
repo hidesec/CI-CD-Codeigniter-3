@@ -14,7 +14,7 @@
                     <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                         <ol class="breadcrumb">
 							<li class="breadcrumb-item"><a href="<?=site_url('kegiatan')?>">Kegiatan</a></li>
-                            <li class="breadcrumb-item"><a href="<?=site_url('jenis-kegiatan')?>">Jenis Kegiatan</a></li>
+                            <li class="breadcrumb-item"><a href="<?=site_url('Jenis_Kegiatan')?>">Jenis Kegiatan</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Edit Form Jenis Kegiatan</li>
                         </ol>
                     </nav>
@@ -34,7 +34,7 @@
 					<div class="card-body">
 						<?php echo validation_errors(); ?>
 
-						<?php echo form_open('jenis_kegiatan/update/'.$jenis_kegiatan[0]['id'], 'class="form form-horizontal"'); ?>
+						<?php echo form_open('Jenis_Kegiatan/update/'.$jenis_kegiatan[0]['id'], 'class="form form-horizontal"'); ?>
                     		<div class="form-body">
 								<div class="row">
 									<div class="col-md-4">
@@ -45,7 +45,7 @@
 											name="nama_jenis_kegiatan" placeholder="Nama Jenis Kegiatan" value="<?=$jenis_kegiatan[0]['nama']?>">
 									</div>
 									<div class="col-sm-12 d-flex justify-content-end">
-										<a href="<?=site_url('jenis-kegiatan')?>"
+										<a href="<?=site_url('Jenis_Kegiatan')?>"
 											class="btn btn-light-secondary me-1 mb-1">Kembali</a>
 										<button type="submit"
 											class="btn btn-primary me-1 mb-1">Update</button>

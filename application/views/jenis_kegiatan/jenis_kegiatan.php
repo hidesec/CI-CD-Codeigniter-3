@@ -25,7 +25,7 @@
             <div class="card">
 				<div class="card-header">
 					Daftar Jenis Kegiatan
-					<a href="<?=site_url('jenis-kegiatan/create')?>" class="btn btn-primary float-end">Buat Baru</a>
+					<a href="<?=site_url('Jenis_Kegiatan/create')?>" class="btn btn-primary float-end">Buat Baru</a>
 				</div>
 				<?php
 					if (isset($message_display)) {
@@ -53,7 +53,7 @@
 								<td><?=$nomor?></td>
                                 <td><?=$jns['nama']?></td>
                                 <td>
-                                    <a href="<?=site_url('jenis-kegiatan/edit/'.$jns['id'])?>" class="btn btn-info">Edit</a>
+                                    <a href="<?=site_url('Jenis_Kegiatan/show/'.$jns['id'])?>" class="btn btn-info">Edit</a>
 									<button type="button" class="btn btn-danger"
                                         data-bs-toggle="modal" data-bs-target="#<?='danger'.'-'.$jns['id']?>">
                                         Hapus
@@ -84,7 +84,7 @@
 														<i class="bx bx-x d-block d-sm-none"></i>
 														<span class="d-none d-sm-block">Tutup</span>
 													</button>
-													<a href="<?=site_url('jenis-kegiatan/hapus/'.$jns['id'])?>" type="button" class="btn btn-danger ml-1">
+													<a href="<?=site_url('Jenis_Kegiatan/delete/'.$jns['id'])?>" type="button" class="btn btn-danger ml-1">
 														<i class="bx bx-check d-block d-sm-none"></i>
 														<span class="d-none d-sm-block">Ya</span>
 													</a>
