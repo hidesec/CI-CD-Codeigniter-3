@@ -135,15 +135,9 @@ class Kegiatan extends CI_Controller{
 			);
 			$result = $this->Kegiatan_model->kegiatan_update($data, $id);
 
-			if ($result == TRUE) {
-				$messages = 'Berhasil menambahkan kegiatan '.$this->input->post('judul').'!';
-				$this->session->set_flashdata('messages', $messages);
-				redirect("kegiatan");
-			}else{
-				$messages = 'Kegiatan '.$this->input->post('judul').' sudah terdaftar!';
-				$this->session->set_flashdata('messages', $messages);
-				redirect("kegiatan/show/".$id);
-			}
+			$messages = 'Berhasil merubah kegiatan '.$this->input->post('judul').'!';
+			$this->session->set_flashdata('messages', $messages);
+			redirect("kegiatan");
 		}
 	}
 

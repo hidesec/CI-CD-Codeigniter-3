@@ -74,15 +74,9 @@ class Jenis_Kegiatan extends CI_Controller {
 
 		$result = $this->Jenis_kegiatan_model->jenis_kegiatan_update($data, $id);
 
-		if ($result == TRUE) {
-			$messages = 'Berhasil merubah jenis kegiatan '.$this->input->post('nama_jenis_kegiatan').'!';
-			$this->session->set_flashdata('messages', $messages);
-			redirect("Jenis_Kegiatan");
-		}else{
-			$messages = 'Jenis kegiatan '.$this->input->post('nama_jenis_kegiatan').' sudah terdaftar!';
-			$this->session->set_flashdata('messages', $messages);
-			redirect("Jenis_Kegiatan/show/".$id);
-		}
+		$messages = 'Berhasil merubah jenis kegiatan '.$this->input->post('nama_jenis_kegiatan').'!';
+		$this->session->set_flashdata('messages', $messages);
+		redirect("Jenis_Kegiatan");
 	}
 
 	public function delete($id){
