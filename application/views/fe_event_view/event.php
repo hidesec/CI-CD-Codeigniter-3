@@ -13,7 +13,8 @@
 	?>
     <div class="row row-cols-3">
 		<?php
-			foreach($kegiatan as $kg){
+			if($kegiatan){
+				foreach($kegiatan as $kg){
 		?>
         <div class="col">
             <div class="card">
@@ -34,6 +35,7 @@
             </div>
         </div>
 		<?php
+				}
 			}
 		?>
     </div>
