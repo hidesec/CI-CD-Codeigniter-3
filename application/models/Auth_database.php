@@ -62,4 +62,18 @@ Class Auth_Database extends CI_Model {
 			return false;
 		}
 	}
+
+	public function get_last_id_user(){
+		$this->db->select('id');
+		$this->db->from('users');
+		$this->db->order_by('id', 'desc');
+		$this->db->limit(1);
+		$query = $this->db->get();
+
+		if ($query->num_rows() == 1) {
+			return $query->result();
+		} else {
+			return false;
+		}
+	}
 }

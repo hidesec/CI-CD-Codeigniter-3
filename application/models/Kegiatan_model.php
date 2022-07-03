@@ -9,8 +9,10 @@ Class Kegiatan_model extends CI_Model
 	}
 
 	public function get_kegiatan(){
-		$this->db->select('*');
+		$this->db->select('kegiatan.*,
+		jenis_kegiatan.nama');
 		$this->db->from('kegiatan');
+		$this->db->join('jenis_kegiatan','jenis_kegiatan.id = kegiatan.jenis_id','left');
 		$query = $this->db->get();
 
 		if($query->num_rows() !== 0)
@@ -24,9 +26,11 @@ Class Kegiatan_model extends CI_Model
 	}
 
 	public function get_kegiatan_id($id){
-		$this->db->select('*');
+		$this->db->select('kegiatan.*,
+		jenis_kegiatan.nama');
 		$this->db->from('kegiatan');
-		$this->db->where('id', $id);
+		$this->db->join('jenis_kegiatan','jenis_kegiatan.id = kegiatan.jenis_id','left');
+		$this->db->where('kegiatan.id', $id);
 		$this->db->limit(1);
 		$query = $this->db->get();
 

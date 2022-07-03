@@ -4,6 +4,7 @@
 	if (isset($this->session->userdata['logged_in'])) {
 		$username = ($this->session->userdata['logged_in']['username']);
 		$email = ($this->session->userdata['logged_in']['email']);
+		$role = ($this->session->userdata['logged_in']['role']);
 	} else {
 		header("location: login");
 	}

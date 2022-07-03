@@ -8,6 +8,12 @@
 
 			//load url helper library
 			$this->load->helper('url');
+
+			// Load session library
+			$this->load->library('session');
+			if($this->session->userdata['logged_in']['role'] !== 'Admin'){
+				redirect('event', 'refresh');
+			}
 		}
 		public function index(){
 			$this->load->view('master_view/header');
