@@ -36,6 +36,12 @@
                         </li>
 					</ul>
 				</li>
+				<li class="sidebar-item <?=uri_string() === 'Kategori_Peserta' ? 'active' : ''?>">
+                    <a href="<?=site_url('Kategori_Peserta')?>" class='sidebar-link'>
+                        <i class="bi bi-grid-fill"></i>
+                        <span>Kategori Peserta</span>
+                    </a>
+                </li>
                 <li class="sidebar-item">
                     <a href="logout" class='sidebar-link'>
                         <i class="bi bi-arrow-left-circle-fill"></i>
